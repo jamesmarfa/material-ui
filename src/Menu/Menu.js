@@ -201,8 +201,8 @@ class Menu extends React.Component<ProvidedProps & Props> {
         getContentAnchorEl={this.getContentAnchorEl}
         classes={PopoverClasses}
         onEnter={this.handleEnter}
-        anchorOrigin={theme.direction === 'rtl' ? rtlOrigin : ltrOrigin}
-        transformOrigin={theme.direction === 'rtl' ? rtlOrigin : ltrOrigin}
+        anchorOrigin={anchorOrigin || theme.direction === 'rtl' ? rtlOrigin : ltrOrigin}
+        transformOrigin={transformOrigin || theme.direction === 'rtl' ? rtlOrigin : ltrOrigin}
         PaperProps={{
           ...PaperProps,
           classes: {
